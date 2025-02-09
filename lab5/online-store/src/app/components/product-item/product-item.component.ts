@@ -10,7 +10,6 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductItemComponent {
   @Input() product: any;
-  @Output() remove = new EventEmitter<number>();
 
   prevImage() {
     this.product.currentImageIndex = 
@@ -40,9 +39,5 @@ export class ProductItemComponent {
 
   openKaspi() {
     window.open(this.product.link, '_blank');
-  }
-
-  removeProduct() {
-    this.remove.emit(this.product.id);
   }
 }

@@ -6,6 +6,5 @@
 </div>
 
 <product-list *ngIf="selectedCategory" 
-              [products]="selectedCategory.products"
-              (removeProduct)="removeProduct($event)">
+              [products]="selectedCategory.products">
 </product-list>
