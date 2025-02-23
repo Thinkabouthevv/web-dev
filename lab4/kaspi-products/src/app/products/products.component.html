@@ -1,0 +1,20 @@
+<div class="products-container">
+  <div *ngFor="let product of products" class="product-card">
+    <div class="image-container">
+      <button class="arrow left" (click)="prevImage(product)">‹</button>
+      <img [src]="product.images[product.currentImageIndex]" [alt]="product.name" class="product-image">
+      <button class="arrow right" (click)="nextImage(product)">›</button>
+    </div>
+
+    <h2>{{ product.name }}</h2>
+    <p class="description">{{ product.description }}</p>
+    <p class="rating">Рейтинг: <b>{{ product.rating }} ⭐</b></p>
+
+    <a [href]="product.link" target="_blank" class="kaspi-button">Перейти на Kaspi</a>
+
+    <div class="share-buttons">
+      <button class="whatsapp-btn" (click)="shareWhatsApp(product)">Share on WhatsApp</button>
+      <button class="telegram-btn" (click)="shareTelegram(product)">Share on Telegram</button>
+    </div>
+  </div>
+</div>
