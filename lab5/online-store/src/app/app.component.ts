@@ -25,6 +25,7 @@ interface Category {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'online-store';
   categories: Category[] = [
     { name: 'Смартфоны', products: [
       {
