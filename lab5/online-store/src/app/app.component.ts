@@ -345,11 +345,6 @@ export class AppComponent {
     this.selectedCategory = category;
   }
 
-  removeProduct(productId: number) {
-    if (this.selectedCategory) {
-      this.selectedCategory.products = this.selectedCategory.products.filter(p => p.id !== productId);
-    }
-  }
   likeProduct(product: Product) {
     product.likes++;
   }

@@ -1,6 +1,5 @@
 <div class="products-container">
   <app-product-item *ngFor="let product of products" 
-                    [product]="product"
-                    (remove)="removeProduct.emit(product.id)">
+                    [product]="product">
   </app-product-item>
 </div>

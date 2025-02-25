@@ -22,5 +22,4 @@ interface Product {
 })
 export class ProductListComponent {
   @Input() products: any[] = [];
-  @Output() removeProduct = new EventEmitter<number>();
 }
